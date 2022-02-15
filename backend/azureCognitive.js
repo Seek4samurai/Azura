@@ -1,9 +1,4 @@
 const async = require('async');
-const fs = require('fs');
-const https = require('https');
-const path = require("path");
-const createReadStream = require('fs').createReadStream
-const sleep = require('util').promisify(setTimeout);
 
 require('dotenv').config();
 
