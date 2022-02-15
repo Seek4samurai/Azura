@@ -1,11 +1,11 @@
-require('dotenv').config();
-
 const async = require('async');
 const fs = require('fs');
 const https = require('https');
 const path = require("path");
 const createReadStream = require('fs').createReadStream
 const sleep = require('util').promisify(setTimeout);
+
+require('dotenv').config();
 
 // Azure Computer vision client
 const ComputerVisionClient = require('@azure/cognitiveservices-computervision').ComputerVisionClient;
@@ -25,19 +25,19 @@ const computerVisionClient = new ComputerVisionClient(
 function computerVision() {
     async.series([
         async function () {
-            const describeURL = "To be added";
+            const describeURL = "https://i.ytimg.com/vi/FsdWNU--qsU/hq720.jpg";
 
             // Analyze URL image;
             // console.log('Analyzing...', describeURL.split('/').pop());
             const caption = (await computerVisionClient.describeImage(describeURL)).captions[0];
             // console.log(caption);
 
-            // console.log(`Following image seems to be ${caption.text} (${caption.confidence.toFixed(2)} confidence percent)`);
+            console.log(`Following image seems to be ${caption.text} (${caption.confidence.toFixed(2)} confidence percent)`);
 
-            imageCaption = caption.text;
-            confidenceLevel = caption.confidence.toFixed(2);
+            // imageCaption = caption.text;
+            // confidenceLevel = caption.confidence.toFixed(2);
 
-            return (imageCaption, confidenceLevel)
+            // return (imageCaption, confidenceLevel)
         },
         function () {
             return new Promise((resolve) => {

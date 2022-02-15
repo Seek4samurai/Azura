@@ -1,5 +1,9 @@
-var buttonClick = document.getElementById("btn");
+var submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", myFunction);
 
-buttonClick.addEventListener("click", function () {
-    chrome.tts.speak('Hello world.', { 'lang': 'en-US', 'rate': 1.0 });
-});
+function myFunction() {
+    document.getElementById("textp").innerText = "Hello world";
+    var input = document.getElementById("imgAddress");
+    // console.log(input.value);
+
+};
