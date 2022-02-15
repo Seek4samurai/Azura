@@ -1,0 +1,12 @@
+{
+  "name": "Azura",
+  "description": "Yes.! Azura",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": ["tts"],
+
+  "action": {
+    "default_popup": "index.html"
+  }
+}
