@@ -1,5 +1,5 @@
 {
-  "name": "Azura",
+  "name": "azura",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,5 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {},
-  "dependencies": {
-    "@azure/cognitiveservices-computervision": "^8.1.0",
-    "async": "^3.2.3",
-    "dotenv": "^16.0.0"
-  }
+  "dependencies": {}
 }

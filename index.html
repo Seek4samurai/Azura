@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/css/style.css" />
     <title>Azura</title>
   </head>
   <body>
@@ -15,15 +14,27 @@
       <div class="formHolder">
         <form>
           <label for="fname">Search</label><br />
-          <input type="text" id="imgAddress" /><br />
-          <div onclick="gettingUserInput()" id="submit">Submit</div>
+          <input type="text" id="imgAddress" placeholder="Insert a url" /><br />
+          <div
+            style="
+              cursor: pointer;
+              background-color: orangered;
+              color: white;
+              display: inline-block;
+              padding: 3px 5px;
+              margin-top: 5px;
+            "
+            id="submit"
+          >
+            Submit
+          </div>
         </form>
       </div>
       <p class="socials">socials here</p>
       <div class="powered">Powered by Azure - cognitive services</div>
     </div>
-    <p id="textp">asdsad</p>
+    <p id="textp">Paste an image url above!</p>
   </body>
-  <!-- <script src="./backend/azureCognitive.js"></script> -->
-  <script src="./backend/main.js"></script>
+  <script src="./assets/js/axios.min.js"></script>
+  <script src="./assets/js/app.js"></script>
 </html>
