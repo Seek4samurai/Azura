@@ -1,7 +1,6 @@
 const paragraph = document.getElementById("textp");
 const input = document.getElementById("imgAddress");
 const submitButton = document.getElementById("submit");
-const confidenceScore = document.getElementById("confidenceScore");
 
 async function identify() {
   const url = input.value;
