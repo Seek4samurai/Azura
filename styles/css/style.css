@@ -2,7 +2,7 @@ html,
 body {
   margin: 0%;
   padding: 0%;
-  font-family: inter, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Lemon Milk, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -27,7 +27,9 @@ a {
 
 .topHalf {
   /* Top */
+  position: relative;
   padding: 1rem;
+  height: 282px;
   background: linear-gradient(111.72deg, #c64efe 8.51%, #f32b8b 89.35%);
 }
 
@@ -94,5 +96,37 @@ a {
   color: white;
   font-weight: lighter;
   font-size: 0.7rem;
+}
+
+.topHalf .textPart .mainHeading {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.topHalf .textPart .poweredBy {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.abstractionHolder {
+  position: relative;
+}
+
+.abstractionHolder .abstraction {
+  position: absolute;
+  top: -1rem;
 }
 /*# sourceMappingURL=style.css.map */
