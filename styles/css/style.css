@@ -1,7 +1,7 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
+  margin: 0%;
+  padding: 0%;
   font-family: inter, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -11,7 +11,88 @@ a {
 }
 
 * {
+  /* Frame 1 */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #363636;
+  font-family: "Lemon Milk", serif;
+  font-weight: 200;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 600px;
+}
+
+.topHalf {
+  /* Top */
+  padding: 1rem;
+  background: linear-gradient(111.72deg, #c64efe 8.51%, #f32b8b 89.35%);
+}
+
+.topHalf .navContainer {
+  position: relative;
+  width: 99%;
+  height: 31px;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 45px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.topHalf .navContainer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topHalf .navContainer .searchContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0.3rem;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 45px;
+  background: linear-gradient(82.7deg, #ff65e6 -1.28%, #ff005c 114.36%);
+}
+
+.topHalf .navContainer .searchContainer .searchText {
+  color: white;
+  font-weight: lighter;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=style.css.map */
