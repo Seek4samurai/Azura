@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="/public/images/AzuraLogo.svg" />
     <link rel="stylesheet" href="./styles/css/style.css" />
+    <link rel="stylesheet" href="./styles/css/rocket.css" />
+
     <title>Azura</title>
   </head>
   <body>
@@ -19,47 +23,81 @@
             <div class="searchContainer">
               <div class="searchText">Search Images</div>
             </div>
-            <div class="dev">Developer!</div>
+            <a href="https://github.com/seek4samurai" target="blank" class="dev"
+              >Developer!</a
+            >
           </div>
         </nav>
+
         <div class="textPart">
-          <h1 class="mainHeading">Search by Images</h1>
-          <p class="poweredBy">
-            Powered by <br />
-            Microsoft Azure
-          </p>
-        </div>
-      </div>
-
-      <div class="abstractionHolder">
-        <div class="abstraction">
-          <img src="./public/images/Abstraction.svg" alt="abstract" />
-        </div>
-      </div>
-
-      <div class="formHolder">
-        <form>
-          <input type="text" id="imgAddress" placeholder="Insert a url" /><br />
-          <div
-            style="
-              cursor: pointer;
-              background-color: orangered;
-              color: white;
-              display: inline-block;
-              padding: 3px 5px;
-              margin-top: 5px;
-            "
-            id="submit"
-          >
-            Submit
+          <h1 class="mainHeading">
+            Search by Images <br /><span id="myRocket" class="rocket">🚀</span>
+          </h1>
+          <div class="azureContainer">
+            <p class="poweredBy">
+              Powered by <br />
+              Microsoft Azure
+            </p>
+            <a href="https://azure.microsoft.com/en-us/" target="blank">
+              <img
+                src="./public/images/Microsoft_Azure.png"
+                alt="Microsoft_Azure"
+                width="30px"
+                height="30px"
+              />
+            </a>
           </div>
-        </form>
+        </div>
       </div>
-      <p class="socials">socials here</p>
-      <div class="powered">Powered by Azure - cognitive services</div>
-      <p id="textp">Paste an image url above!</p>
+
+      <div class="centerContent">
+        <div class="abstractionHolder">
+          <div class="abstraction">
+            <img src="./public/images/Abstraction.svg" alt="abstract" />
+          </div>
+        </div>
+
+        <div class="formHere">
+          <input
+            type="text"
+            id="imgAddress"
+            placeholder="Paste Image Url"
+          /><br />
+        </div>
+      </div>
+
+      <div class="answerContainer">
+        <p id="textp">Paste an image url above!</p>
+      </div>
+
+      <div class="footer">
+        <div class="icons">
+          <a href="https://github.com/seek4samurai/azura" target="blank">
+            <img
+              src="./public/images/github.png"
+              alt="github"
+              width="50px"
+              height="50px"
+            />
+          </a>
+        </div>
+        <div id="submit" class="button text-center">
+          <div id="submit" class="rainbow rainbow-5">Search</div>
+        </div>
+        <div class="icons">
+          <a href="https://www.artstation.com/seek4samurai" target="blank">
+            <img
+              src="./public/images/artstation.png"
+              alt="artstation"
+              width="50px"
+              height="50px"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   </body>
   <script src="./assets/js/axios.min.js"></script>
   <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/rocket.js"></script>
 </html>

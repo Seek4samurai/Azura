@@ -100,7 +100,7 @@ a {
 
 .topHalf .textPart .mainHeading {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -109,24 +109,172 @@ a {
   font-size: 2rem;
   font-weight: 100;
   color: #ffffff;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
 }
 
-.topHalf .textPart .poweredBy {
+.topHalf .textPart .azureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 80%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #ffffff;
-  text-align: center;
 }
 
-.abstractionHolder {
+.topHalf .textPart .poweredBy {
+  opacity: 0.9;
+  padding-right: 1rem;
+  text-align: center;
+  color: #ffffff;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.centerContent .abstractionHolder {
   position: relative;
 }
 
-.abstractionHolder .abstraction {
+.centerContent .abstractionHolder .abstraction {
   position: absolute;
   top: -1rem;
+  z-index: 1;
+}
+
+.centerContent .abstractionHolder .abstraction img {
+  max-width: 100%;
+}
+
+.centerContent .formHere input {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1rem;
+  padding: 1rem;
+  margin-top: 5%;
+  width: 475px;
+  height: 64px;
+  -webkit-box-shadow: 0px 4px 4px #ffbce4;
+          box-shadow: 0px 4px 4px #ffbce4;
+  z-index: 10;
+  border: 2px solid;
+  border-color: #ff1e87;
+  border-radius: 15px;
+  background: #efefef;
+}
+
+.centerContent ::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+.centerContent :-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.centerContent ::-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.centerContent ::placeholder {
+  color: #a8a8a8;
+}
+
+.answerContainer {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 0.7rem;
+  padding: 1.4rem;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px !important;
+  border: 2px solid;
+  border-color: #ff1e87;
+  border-radius: 15px;
+  max-width: 90%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  margin-top: 1rem;
+}
+
+.footer .button {
+  border-radius: 8px;
+}
+
+.footer .button .rainbow {
+  cursor: pointer;
+  padding: 16px 20px;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #343a40;
+}
+
+.footer .button .rainbow-5:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#e7484f), color-stop(16.65%, #e7484f), color-stop(16.65%, #f68b1d), color-stop(33.3%, #f68b1d), color-stop(33.3%, #fced00), color-stop(49.95%, #fced00), color-stop(49.95%, #009e4f), color-stop(66.6%, #009e4f), color-stop(66.6%, #00aac3), color-stop(83.25%, #00aac3), color-stop(83.25%, #732982), color-stop(100%, #732982), to(#e7484f));
+  background-image: linear-gradient(to right, #e7484f, #e7484f 16.65%, #f68b1d 16.65%, #f68b1d 33.3%, #fced00 33.3%, #fced00 49.95%, #009e4f 49.95%, #009e4f 66.6%, #00aac3 66.6%, #00aac3 83.25%, #732982 83.25%, #732982 100%, #e7484f 100%);
+  -webkit-animation: slidebg 2s linear infinite;
+          animation: slidebg 2s linear infinite;
+}
+
+@-webkit-keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

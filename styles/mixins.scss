@@ -1,0 +1,13 @@
+@mixin bgGradient-1 {
+    background: linear-gradient(111.72deg, #c64efe 8.51%, #f32b8b 89.35%);
+}
+
+@mixin bgGradient-2 {
+    background: linear-gradient(82.7deg, #ff65e6 -1.28%, #ff005c 114.36%);
+}
+
+@mixin borderGradient {
+    border: 2px solid;
+    border-color: #ff1e87;
+    border-radius: 15px;
+}

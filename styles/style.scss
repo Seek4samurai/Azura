@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 html,
 body {
@@ -27,6 +28,7 @@ a {
     height: 600px;
 }
 
+// top half section
 .topHalf {
     /* Top */
     position: relative;
@@ -34,7 +36,7 @@ a {
     padding: 1rem;
 
     height: 282px;
-    background: linear-gradient(111.72deg, #c64efe 8.51%, #f32b8b 89.35%);
+    @include bgGradient-1;
 
     .navContainer {
         position: relative;
@@ -73,7 +75,7 @@ a {
             align-items: center;
 
             border-radius: 45px;
-            background: linear-gradient(82.7deg, #ff65e6 -1.28%, #ff005c 114.36%);
+            @include bgGradient-2;
 
             .searchText {
                 color: white;
@@ -82,10 +84,11 @@ a {
             }
         }
     }
+
     .textPart {
         .mainHeading {
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 50%;
             transform: translateX(-50%);
 
@@ -96,23 +99,162 @@ a {
             font-weight: 100;
 
             color: $primary-heading-color;
+
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
         }
-        .poweredBy {
+
+        .azureContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
             position: absolute;
             top: 80%;
             left: 50%;
             transform: translateX(-50%);
+        }
 
-            color: $primary-heading-color;
+        .poweredBy {
+            opacity: 0.9;
+
+            padding-right: 1rem;
+
             text-align: center;
+            color: $primary-heading-color;
+
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+/Edge */
+            user-select: none; /* Standard */
         }
     }
 }
 
-.abstractionHolder {
+// center text section
+.centerContent {
+    .abstractionHolder {
+        position: relative;
+
+        .abstraction {
+            position: absolute;
+            top: -1rem;
+
+            z-index: 1;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .formHere {
+        // position: relative;
+
+        input {
+            position: relative;
+            // position: absolute;
+            // top: 51.5%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            font-size: 1rem;
+            padding: 1rem;
+            margin-top: 5%;
+
+            width: 475px;
+            height: 64px;
+
+            box-shadow: 0px 4px 4px #ffbce4;
+
+            z-index: 10;
+
+            @include borderGradient;
+
+            background: #efefef;
+        }
+    }
+
+    ::placeholder {
+        color: #a8a8a8;
+    }
+}
+
+// answer section
+.answerContainer {
     position: relative;
-    .abstraction {
-        position: absolute;
-        top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 0.7rem;
+    padding: 1.4rem;
+
+    font-size: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 8px !important;
+    @include borderGradient;
+
+    max-width: 90%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+// socials and search button
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+
+    margin-top: 1rem;
+
+    .button {
+        border-radius: 8px;
+
+        .rainbow {
+            cursor: pointer;
+            padding: 16px 20px;
+
+            font-size: 0.8rem;
+
+            color: #fff;
+            border-radius: 4px;
+            background-color: #343a40;
+        }
+
+        .rainbow-5:hover {
+            background-image: linear-gradient(
+                to right,
+                #e7484f,
+                #e7484f 16.65%,
+                #f68b1d 16.65%,
+                #f68b1d 33.3%,
+                #fced00 33.3%,
+                #fced00 49.95%,
+                #009e4f 49.95%,
+                #009e4f 66.6%,
+                #00aac3 66.6%,
+                #00aac3 83.25%,
+                #732982 83.25%,
+                #732982 100%,
+                #e7484f 100%
+            );
+            animation: slidebg 2s linear infinite;
+        }
+
+        @keyframes slidebg {
+            to {
+                background-position: 20vw;
+            }
+        }
     }
 }
