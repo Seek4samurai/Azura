@@ -1,0 +1,27 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.rocket {
+    cursor: pointer;
+    font-size: 3.5rem;
+    transition: 1s;
+
+    animation: rocketWave 2s ease-in infinite;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    @keyframes rocketWave {
+        0% {
+            font-size: 4rem;
+        }
+        50% {
+            font-size: 3.5rem;
+        }
+        100% {
+            font-size: 4rem;
+        }
+    }
+}
