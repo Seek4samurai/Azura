@@ -7,6 +7,18 @@
   "permissions": ["tts"],
 
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/public/images/logo/azura16.png",
+      "32": "/public/images/logo/azura32.png",
+      "48": "/public/images/logo/azura48.png",
+      "128": "/public/images/logo/azura128.png"
+    }
+  },
+  "icons": {
+    "16": "/public/images/logo/azura16.png",
+    "32": "/public/images/logo/azura32.png",
+    "48": "/public/images/logo/azura48.png",
+    "128": "/public/images/logo/azura128.png"
   }
 }
